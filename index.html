@@ -8,15 +8,14 @@
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
-      <div id="unity-container" class="unity-desktop">
-          <canvas id="unity-canvas" width=900 height=480 tabindex="-1"></canvas>
-          <div id="unity-loading-bar">
-              <!--<div id="unity-logo"></div>-->
-              <div id="loading">LOADING...</div>
-              <div id="unity-progress-bar-empty">
-                  <div id="unity-progress-bar-full"></div>
-              </div>
-          </div>
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas" width=900 height=480 tabindex="-1"></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
       <div id="unity-warning"> </div>
       <div id="unity-footer">
         <div id="unity-logo-title-footer"></div>
@@ -56,9 +55,9 @@
       var loaderUrl = buildUrl + "/soccer.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/soccer.data",
-        frameworkUrl: buildUrl + "/soccer.framework.js",
-        codeUrl: buildUrl + "/soccer.wasm",
+        dataUrl: buildUrl + "/soccer.data.unityweb",
+        frameworkUrl: buildUrl + "/soccer.framework.js.unityweb",
+        codeUrl: buildUrl + "/soccer.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "eSolutionn",
         productName: "Soccer: Penalty Shootout",
