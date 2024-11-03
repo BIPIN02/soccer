@@ -145,7 +145,7 @@ body {
 
     #unity-progress-bar-empty,
     #unity-progress-bar-full {
-        width: 0%; /* Full width progress bars */
+        width: 100%; /* Full width progress bars */
         height: 12px; /* Smaller height */
     }
 
