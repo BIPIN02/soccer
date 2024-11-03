@@ -1,4 +1,4 @@
-/* Reset padding and margin for the entire document */
+/* Reset padding and margin */
 body, html {
     padding: 0;
     margin: 0;
@@ -8,7 +8,7 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
-/* Unity container styles */
+/* Unity container */
 #unity-container {
     position: absolute;
     width: 100%;
@@ -18,21 +18,21 @@ body, html {
     align-items: center;
 }
 
-    /* Desktop-specific styling for centering content */
+    /* Desktop-specific centering */
     #unity-container.unity-desktop {
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
     }
 
-    /* Mobile-specific styling for full screen usage */
+    /* Fullscreen width and height on mobile devices */
     #unity-container.unity-mobile {
         width: 100%;
         height: 100%;
         position: relative;
     }
 
-/* Unity canvas background color */
+/* Background color for Unity canvas */
 #unity-canvas {
     background: #231F20;
     width: 100%;
@@ -40,13 +40,13 @@ body, html {
     object-fit: cover; /* Ensures canvas scales proportionally */
 }
 
-/* Fullscreen canvas for mobile */
+/* Ensure the canvas occupies full width and height on mobile */
 .unity-mobile #unity-canvas {
     width: 100%;
     height: 100%;
 }
 
-/* Loading bar position and styling */
+/* Loading bar styles */
 #unity-loading-bar {
     position: absolute;
     left: 50%;
@@ -59,7 +59,7 @@ body, html {
 
 /* Loading text styling */
 #loading {
-    width: 50%;
+    width: 100%;
     text-align: center;
     margin-top: 10px;
     font-weight: bold;
@@ -67,7 +67,7 @@ body, html {
     color: white;
 }
 
-/* Unity logo for loading screen */
+/* Unity logo styling */
 #unity-logo {
     width: 154px;
     height: 130px;
@@ -75,7 +75,7 @@ body, html {
     background-size: contain;
 }
 
-/* Empty progress bar styling */
+/* Empty progress bar */
 #unity-progress-bar-empty {
     width: 141px;
     height: 18px;
@@ -84,12 +84,12 @@ body, html {
     background-size: contain;
 }
 
-/* Full progress bar styling */
+/* Full progress bar with smooth animation */
 #unity-progress-bar-full {
     height: 18px;
     background: url('progress-bar-full-dark.png') no-repeat center;
     background-size: contain;
-    transition: width 0.3s ease; /* Smooth progress animation */
+    transition: width 0.3s ease;
 }
 
 /* Footer styling */
@@ -103,12 +103,12 @@ body, html {
     bottom: 0;
 }
 
-/* Hide footer on mobile */
+/* Hide footer on mobile for better screen usage */
 .unity-mobile #unity-footer {
     display: none;
 }
 
-/* WebGL logo on footer */
+/* WebGL logo in the footer */
 #unity-webgl-logo {
     width: 120px;
     height: 38px;
@@ -116,7 +116,7 @@ body, html {
     background-size: contain;
 }
 
-/* Game title in the footer */
+/* Game title styling in the footer */
 #unity-build-title {
     flex: 1;
     text-align: center;
@@ -145,10 +145,10 @@ body, html {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     font-size: 14px;
     color: #333;
-    display: none; /* Show only when needed */
+    display: none;
 }
 
-/* Responsive adjustments for mobile devices */
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     /* Adjust loading text size on smaller screens */
     #loading {
@@ -161,7 +161,7 @@ body, html {
         width: 100px;
     }
 
-    /* Center footer items in a single column on narrow screens */
+    /* Center footer items in a single column */
     #unity-footer {
         flex-direction: column;
         align-items: center;
@@ -172,12 +172,9 @@ body, html {
         font-size: 16px;
     }
 
-    /* Adjust WebGL logo size for mobile */
+    /* Resize WebGL logo for mobile */
     #unity-webgl-logo {
         width: 100px;
         height: 30px;
     }
 }
-
-#unity-mobile-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
-@import url('file:///D:\BipinWorkSpace\Client\Adrian Gomez\Lottery\Lottery\TemplateData\style.css');
