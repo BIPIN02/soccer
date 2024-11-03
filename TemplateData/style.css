@@ -39,7 +39,8 @@ body {
 
 #loading {
     width: 100%;
-    font-family: Roboto-Bold, Arial, sans-serif;
+    height:50%;
+    font-family: Roboto-Bold;
     font-size: 30px;
     color: white;
     margin-bottom: 15px; /* Spacing below loading text */
@@ -53,7 +54,7 @@ body {
 }
 
 #unity-progress-bar-empty {
-    width: 141px; /* Original width for the loading bar */
+    width: 154px; /* Original width for the loading bar */
     height: 18px;
     margin-top: 10px;
     background: url('progress-bar-empty-dark.png') no-repeat center;
@@ -144,7 +145,7 @@ body {
 
     #unity-progress-bar-empty,
     #unity-progress-bar-full {
-        width: 100%; /* Full width progress bars */
+        width: 0%; /* Full width progress bars */
         height: 12px; /* Smaller height */
     }
 
