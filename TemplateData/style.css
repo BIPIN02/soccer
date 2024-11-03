@@ -54,7 +54,7 @@ body {
 }
 
 #unity-progress-bar-empty {
-    width: 154px; /* Original width for the loading bar */
+    width: 141px; /* Original width for the loading bar */
     height: 18px;
     margin-top: 10px;
     background: url('progress-bar-empty-dark.png') no-repeat center;
