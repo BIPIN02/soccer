@@ -61,7 +61,7 @@ body {
 }
 
 #unity-progress-bar-full {
-    width: 0%; /* Initial width is 0% */
+    width: 0px; /* Initial width is 0% */
     height: 18px;
     margin-top: 10px;
     background: url('progress-bar-full-dark.png') no-repeat center;
