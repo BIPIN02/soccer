@@ -63,8 +63,7 @@ body {
 
 #unity-progress-bar-full {
     width: 0%; /* Initial width is 0% */
-    height: 18px;
-    margin-top: 10px;
+    height: 16px;
     background: url('progress-bar-full-dark.png') no-repeat center;
     background-size: contain; /* Keep original size */
 }
@@ -146,7 +145,7 @@ body {
     #unity-progress-bar-empty,
     #unity-progress-bar-full {
         width: 100%; /* Full width progress bars */
-        height: 18px; /* Smaller height */
+        height: 16px; /* Smaller height */
     }
 
     #unity-footer {
