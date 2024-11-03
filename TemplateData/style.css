@@ -61,7 +61,7 @@ body {
 }
 
 #unity-progress-bar-full {
-    width: 0px; /* Initial width is 0% */
+    width: 0%; /* Initial width is 0% */
     height: 18px;
     margin-top: 10px;
     background: url('progress-bar-full-dark.png') no-repeat center;
@@ -89,7 +89,7 @@ body {
 
 #unity-build-title {
     float: right;
-    margin-right: 50px;
+    margin-right: 0px;
     line-height: 38px;
     font-family: Arial, sans-serif;
     font-size: 18px;
@@ -124,10 +124,14 @@ body {
         height: auto; /* Allow height to adjust */
         max-height: none; /* Remove max height constraint */
     }
-
     #unity-loading-bar {
-        width: 90%; /* Adjust loading bar width */
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
     }
+
 
     #loading {
         font-size: 24px; /* Smaller font size for mobile */
