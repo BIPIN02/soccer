@@ -1,82 +1,82 @@
 body {
     padding: 0;
     margin: 0;
-    overflow: hidden;
+    background-color: #231F20; /* Set a background color for better contrast */
 }
+
 #unity-container {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Adjusted width for responsiveness */
+    max-width: 1200px; /* Maximum width for larger screens */
+    height: 80%; /* Adjusted height for responsiveness */
+    max-height: 800px; /* Maximum height for larger screens */
 }
 
-    /* Center Unity canvas on desktop */
     #unity-container.unity-desktop {
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        width: 80%; /* For desktop, keep a reasonable width */
+        height: 80%; /* Height adjustment for desktop */
     }
 
-    /* Fullscreen on mobile */
-    #unity-container.unity-mobile {
-        width: 100%;
-        height: 100%;
-    }
-
-/* Canvas */
 #unity-canvas {
     background: #231F20;
     width: 100%;
     height: 100%;
 }
 
-/* Loading bar styles */
 #unity-loading-bar {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    display: none;
-    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 #loading {
-    width: 50%;
-    height: 50%;
-    margin-top: 10px;
-    font-family: Roboto-Bold, sans-serif;
+    width: 100%;
+    font-family: Roboto-Bold, Arial, sans-serif;
     font-size: 30px;
     color: white;
-    text-align: center;
+    margin-bottom: 15px; /* Spacing below loading text */
 }
 
 #unity-logo {
     width: 154px;
     height: 130px;
     background: url('unity-logo-dark.png') no-repeat center;
+    background-size: contain;
 }
 
 #unity-progress-bar-empty {
-    width: 141px;
+    width: 141px; /* Original width for the loading bar */
     height: 18px;
     margin-top: 10px;
     background: url('progress-bar-empty-dark.png') no-repeat center;
+    background-size: contain; /* Keep original size */
 }
 
 #unity-progress-bar-full {
-    width: 0%;
+    width: 0%; /* Initial width is 0% */
     height: 18px;
     margin-top: 10px;
     background: url('progress-bar-full-dark.png') no-repeat center;
+    background-size: contain; /* Keep original size */
 }
 
 #unity-footer {
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
 }
 
-/* Hide footer on mobile */
 .unity-mobile #unity-footer {
-    display: none;
+    display: none; /* Hide footer on mobile */
 }
 
 #unity-webgl-logo {
@@ -84,29 +84,73 @@ body {
     width: 204px;
     height: 38px;
     background: url('webgl-logo.png') no-repeat center;
+    background-size: contain;
 }
 
 #unity-build-title {
     float: right;
-    margin-right: 10px;
+    margin-right: 50px;
     line-height: 38px;
     font-family: Arial, sans-serif;
     font-size: 18px;
+    color: white; /* Ensure text is visible */
 }
 
 #unity-fullscreen-button {
-    float: right;
+    position: absolute; /* Change to absolute positioning */
+    bottom: 10px; /* Position from the bottom */
+    right: 10px; /* Position from the right */
     width: 38px;
     height: 38px;
-    background: url('fullscreen-button.png') no-repeat center;
+    background: url('fullscreen-button.png') no-repeat center; /* Original button style */
+    background-size: contain; /* Keep original size */
+    z-index: 10; /* Ensure it's on top of other elements */
 }
 
 #unity-mobile-warning {
     position: absolute;
     left: 50%;
     top: 5%;
-    transform: translateX(-50%);
+    transform: translate(-50%);
     background: white;
     padding: 10px;
     display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #unity-container {
+        width: 95%; /* Make container wider on mobile */
+        height: auto; /* Allow height to adjust */
+        max-height: none; /* Remove max height constraint */
+    }
+
+    #unity-loading-bar {
+        width: 90%; /* Adjust loading bar width */
+    }
+
+    #loading {
+        font-size: 24px; /* Smaller font size for mobile */
+    }
+
+    #unity-logo {
+        width: 120px; /* Smaller logo for mobile */
+        height: 100px;
+    }
+
+    #unity-progress-bar-empty,
+    #unity-progress-bar-full {
+        width: 100%; /* Full width progress bars */
+        height: 12px; /* Smaller height */
+    }
+
+    #unity-footer {
+        flex-direction: column; /* Stack footer elements */
+        align-items: center; /* Center footer items */
+    }
+
+    #unity-fullscreen-button {
+        width: 30px; /* Smaller button size for mobile */
+        height: 30px; /* Smaller button size for mobile */
+    }
 }
